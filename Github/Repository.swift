@@ -8,5 +8,14 @@
 import Foundation
 
 struct Repository : Decodable {
-    //let 
+    let id : Int
+    let name : String
+    let description : String
+    let starGazerCount : Int
+    let language : String
+    
+    enum CodingKeys : String , CodingKey{
+        case id , name, description, language
+        case starGazerCount = "stargazer_count"
+    }
 }
